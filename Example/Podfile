@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HSBUIViewInitializable_Example' do
+  pod 'HSBUIViewInitializable', :path => '../'
+
+  target 'HSBUIViewInitializable_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
