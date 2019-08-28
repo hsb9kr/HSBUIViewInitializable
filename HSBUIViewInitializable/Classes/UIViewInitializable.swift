@@ -18,6 +18,10 @@ public extension UIViewInitializable where Self: UIView {
     }
     
     static func loadFromNib() -> Self {
-        return UINib(nibName: identifier, bundle: nil).instantiate(withOwner: self, options: nil).first as! Self
+        return nib.instantiate(withOwner: self, options: nil).first as! Self
+    }
+    
+    static var nib: UINib {
+        return UINib(nibName: identifier, bundle: nil)
     }
 }
