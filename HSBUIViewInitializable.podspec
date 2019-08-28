@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HSBUIViewInitializable'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'HSBUIViewInitializable.'
   s.swift_version    = '5.0'
 
