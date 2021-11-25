@@ -23,7 +23,7 @@ public extension UIViewInitializable where Self: UIView {
 	
 	func loadViewFromNib() -> Self {
 		let bundle = Bundle(for: type(of: self))
-		let nib = UINib(nibName: identifier, bundle: bundle)
+		let nib = UINib(nibName: Self.identifier, bundle: bundle)
 		return nib.instantiate(withOwner: self, options: nil).first as! Self
 	}
 }
