@@ -21,9 +21,9 @@ public extension UIViewInitializable where Self: UIView {
         return UINib(nibName: identifier, bundle: nil).instantiate(withOwner: self, options: nil).first as! Self
     }
 	
-	func loadViewFromNib() -> Self {
+	func loadViewFromNib() -> UIView? {
 		let bundle = Bundle(for: type(of: self))
 		let nib = UINib(nibName: Self.identifier, bundle: bundle)
-		return nib.instantiate(withOwner: self, options: nil).first as! Self
+		return nib.instantiate(withOwner: self, options: nil).first as? UIView
 	}
 }
